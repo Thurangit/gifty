@@ -8,8 +8,6 @@ const AmountGift = () => {
     const [showError, setShowError] = useState(false);
     const [proverbText, setProverbText] = useState('');
     const Navigate = useNavigate();
-
-
     const proverbOriginal = "Un cadeau n'est pas mesuré par sa valeur, mais par l'amour et l'intention de faire plaisir qui l'accompagnent.";
 
     useEffect(() => {

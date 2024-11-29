@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Snowfall = ({ 
-  snowflakeCount = 50, 
+  snowflakeCount, 
   snowflakeColor = 'bg-red-200', 
   animationDuration = 10 
 }) => {

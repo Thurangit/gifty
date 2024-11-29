@@ -4,6 +4,7 @@ import '../style/firstCss.css';
 import gift from '../composants/images/one_gift.png';
 import image from '../composants/images/R.png'
 import { useNavigate } from 'react-router';
+import Snowfall from '../modules/snowFall';
 // Styles pour l'animation des flocons
 const styles = `
   @keyframes verticalFall {
@@ -130,6 +131,7 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      <Snowfall snowflakeCount={300} />
     </nav>
   );
 };
@@ -233,7 +235,7 @@ const WelcomePage = () => {
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-white to-blue-50">
         <Loader loading={loading} />
 
-        {!loading && snowflakes.map(snowflake => (
+       {/*  {!loading && snowflakes.map(snowflake => (
           <Snowflake
             key={snowflake.id}
             style={{
@@ -244,8 +246,10 @@ const WelcomePage = () => {
               transform: `rotate(${snowflake.rotation}deg)`,
             }}
           />
-        ))}
-
+        ))} */}
+        {!loading &&
+          <Snowfall snowflakeCount={200} />
+        }
         <Navigation />
         <HeroSection />
       </div>
