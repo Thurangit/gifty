@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-const AtOpenGift = () => {
+const Dasboard = () => {
 
     return (
         <div>
@@ -10,4 +10,4 @@ const AtOpenGift = () => {
     );
 }
 
-export default AtOpenGift;
+export default Dasboard;

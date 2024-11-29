@@ -6,15 +6,16 @@ import SelectGift from '../pages/sender/selectGift';
 import MessageGift from '../pages/sender/messageGift';
 import FormConfirmGift from '../pages/sender/formConfirmGift';
 import ClosingGift from '../pages/receiver/closingGift';
-import IsOpenGift from '../pages/receiver/isOpenGift';
 import ConfirmReception from '../pages/receiver/confirmReception';
-/* import RootPhone from './rootphone';
-import MenuPage from './menuPage';
- */
+import IsOpenGift from '../pages/receiver/isOpenGift';
+import AboutWebsite from '../pages/about'
+import Dasboard from '../pages/adminer/dashboard';
+
 const routes = [
 
     //  WEBSITE PART
     { path: '/', element: <WelcomePage />, name: 'WelcomePage' },
+    { path: '/About', element: <AboutWebsite />, name: 'About' },
 
     // SENDER PART 
     { path: '/Amount', element: <AmountGift />, name: 'Amount' },
@@ -26,7 +27,10 @@ const routes = [
     { path: '/Open/The/Gift', element: <ClosingGift />, name: 'AtOpenGift' },
     { path: '/The/Gift', element: <IsOpenGift />, name: 'TheGift' },
     { path: '/Congratulation', element: <ConfirmReception />, name: 'ConfirmReception' },
-    // ADMIN PART
+
+    // ADMIN DASHBOARD
+    { path: '/Dasboard', element: <Dasboard />, name: 'Dashboard' },
+
 ];
 
 const AppRoutes = () => {
