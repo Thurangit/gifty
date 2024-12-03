@@ -8,15 +8,17 @@ import FormConfirmGift from '../pages/sender/formConfirmGift';
 import OpeningGift from './isOpenGift';
 import IsOpenGift from './isOpenGift';
 import Dasboard from '../adminer/dashboard';
+import ShareGift from '../sender/shareGift';
 
 const routes = [
     //  WEBSITE PART
     { path: '/', element: <WelcomePage />, name: 'WelcomePage' },
+    { path: '/Share/Gift/:ref', element: <ShareGift />, name: 'WelcomePage' },
 
     // SENDER PART 
-    { path: '/Amount', element: <AmountGift />, name: 'Amount' },
-    { path: '/Select/Gift', element: <SelectGift />, name: 'SelectGift' },
-    { path: '/Message/Gift', element: <MessageGift />, name: 'MessageGift' },
+    { path: '/Amount/:amount', element: <AmountGift />, name: 'Amount' },
+    { path: '/Select/Gift/:amount', element: <SelectGift />, name: 'SelectGift' },
+    { path: '/Message/Gift/:gift/:amount', element: <MessageGift />, name: 'MessageGift' },
     { path: '/Form/Confirm/Gift', element: <FormConfirmGift />, name: 'FormConfirmGift' },
 
     // RECEIVER PART

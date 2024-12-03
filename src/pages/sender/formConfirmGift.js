@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-const FormConfirmGift = () =>{
-    
+const FormConfirmGift = () => {
+
     return (
         <div>
-Page
+            Page
         </div>
     );
 }

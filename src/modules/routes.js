@@ -10,6 +10,7 @@ import ConfirmReception from '../pages/receiver/confirmReception';
 import IsOpenGift from '../pages/receiver/isOpenGift';
 import AboutWebsite from '../pages/about'
 import Dasboard from '../pages/adminer/dashboard';
+import ShareGift from '../pages/sender/shareGift';
 
 const routes = [
 
@@ -19,9 +20,10 @@ const routes = [
 
     // SENDER PART 
     { path: '/Amount', element: <AmountGift />, name: 'Amount' },
-    { path: '/Select/Gift', element: <SelectGift />, name: 'SelectGift' },
-    { path: '/Message/Gift', element: <MessageGift />, name: 'MessageGift' },
-    { path: '/Form/Confirm/Gift', element: <FormConfirmGift />, name: 'MessageGift' },
+    { path: '/Select/Gift/:amount', element: <SelectGift />, name: 'SelectGift' },
+    { path: '/Message/Gift/:gift/:amount', element: <MessageGift />, name: 'MessageGift' },
+    { path: '/Form/Confirm/Gift', element: <FormConfirmGift />, name: 'FormConfirmGift' },
+    { path: '/Share/Gift', element: <ShareGift />, name: 'ShareGift' },
 
     // RECEIVER PART
     { path: '/Open/The/Gift', element: <ClosingGift />, name: 'AtOpenGift' },
