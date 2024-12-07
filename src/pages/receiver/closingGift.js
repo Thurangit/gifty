@@ -41,9 +41,7 @@ const ClosingGift = ({
                                 className={`w-full h-full`}
                             />
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-['Dancing_Script'] text-gray-800 mb-4">
-                            Surprise!
-                        </h3>
+
                         <p className="text-lg sm:text-xl md:text-2xl font-['Dancing_Script'] text-gray-600 
               max-w-full px-4 leading-relaxed">
                             Vous avez reçu un cadeau de Junior Thuran ! Quelque chose de spécial t'attend. Clic pour l'ouvrir...!
