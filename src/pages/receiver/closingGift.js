@@ -26,7 +26,7 @@ const ClosingGift = ({
         navigate(page)
     }
     return (
-        <div className="min-h-screen flex items-center justify-center bg-white p-4" onClick={() => page("/The/Gift")}>
+        <div className="min-h-screen flex items-center justify-center bg-white p-4" >
             <div className="w-full max-w-md text-center">
                 {isOpening ? (
                     <div className="animate-pulse text-3xl font-['Dancing_Script'] text-grey-800 
@@ -38,7 +38,7 @@ const ClosingGift = ({
             transition-all duration-1000 transform
             ${isOpen ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}
             flex flex-col items-center justify-center
-          `}>
+          `} onClick={() => page("/The/Gift")}>
                         <div className={`mb-6 mx-auto animate-bounce ${imageSize}`}>
                             <img
                                 src={imageUrl}

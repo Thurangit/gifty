@@ -7,6 +7,7 @@ import momo from '../../composants/images/operators/momo.jpeg'
 import visa from '../../composants/images/operators/visa.jpeg'
 import payapl from '../../composants/images/operators/paypal.png'
 import testimg from '../../composants/images/004.png'
+import Snowfall from '../../modules/snowFall';
 
 // Logos (remplacez par vos propres liens)
 const LOGOS = {
@@ -282,6 +283,7 @@ const IsOpenGift = () => {
                     )}
                 </AnimatePresence>
             </div>
+            <Snowfall snowflakeCount={200} />
         </div>
     );
 };
