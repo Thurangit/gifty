@@ -18,7 +18,7 @@ const LOGOS = {
 
 const IsOpenGift = () => {
     // État pour le montant du cadeau reçu
-    const [giftAmount, setGiftAmount] = useState(25000); // Montant du cadeau par défaut
+    const [giftAmount, setGiftAmount] = useState(250000); // Montant du cadeau par défaut
 
     const [proverbText, setProverbText] = useState('');
     const [textColor, setTextColor] = useState('');
@@ -28,7 +28,7 @@ const IsOpenGift = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-    const proverbOriginal = "Un cadeau n'est pas mesuré par sa valeur, mais par l'amour et l'intention de faire plaisir qui l'accompagnent.";
+    const proverbOriginal = "Chaque moment avec toi est précieux, et ce cadeau est une petite partie de notre aventure. Utilise-le pour réaliser un de tes désirs, car ton bonheur est mon plus grand plaisir."
 
     // Couleurs aléatoires pour l'animation de texte
     const randomColors = ['text-red-500', 'text-pink-500'];
