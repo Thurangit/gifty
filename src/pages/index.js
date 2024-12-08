@@ -157,8 +157,10 @@ const HeroSection = () => {
           className="flex justify-center md:justify-start"
         >
           <button className="flex items-center space-x-2 px-8 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors shadow-lg hover:shadow-xl">
-            <Gift className="w-5 h-5" />
+
             <span>Envoyer un cadeau</span>
+            <Gift className="w-5 h-5" />
+
           </button>
         </motion.div>
       </motion.div>

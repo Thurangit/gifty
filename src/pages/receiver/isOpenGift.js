@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Drawer } from 'vaul';
+import { Gift } from 'lucide-react';
+import om from '../../composants/images/operators/om.avif'
+import momo from '../../composants/images/operators/momo.jpeg'
+import visa from '../../composants/images/operators/visa.jpeg'
+import payapl from '../../composants/images/operators/paypal.png'
+import testimg from '../../composants/images/004.png'
 
 // Logos (remplacez par vos propres liens)
 const LOGOS = {
-    orange: 'https://example.com/orange-logo.png',
-    mtn: 'https://example.com/mtn-logo.png',
-    creditCard: 'https://example.com/credit-card-logo.png',
-    paypal: 'https://example.com/paypal-logo.png'
+    Orange: om,
+    MTN: momo,
+    Carte: visa,
+    PayPal: payapl
 };
 
 const IsOpenGift = () => {
@@ -25,7 +31,7 @@ const IsOpenGift = () => {
     const proverbOriginal = "Un cadeau n'est pas mesuré par sa valeur, mais par l'amour et l'intention de faire plaisir qui l'accompagnent.";
 
     // Couleurs aléatoires pour l'animation de texte
-    const randomColors = ['text-red-500', 'text-blue-500', 'text-pink-500'];
+    const randomColors = ['text-red-500', 'text-pink-500'];
 
     useEffect(() => {
         // Définir le texte et choisir une couleur aléatoire
@@ -91,7 +97,7 @@ const IsOpenGift = () => {
                 </div>
 
                 {/* Formulaires spécifiques aux méthodes de paiement */}
-                {selectedPaymentMethod === 'orange' && (
+                {selectedPaymentMethod === 'Orange' && (
                     <input
                         type="tel"
                         placeholder="Numéro Orange Money"
@@ -100,7 +106,7 @@ const IsOpenGift = () => {
                     />
                 )}
 
-                {selectedPaymentMethod === 'mtn' && (
+                {selectedPaymentMethod === 'MTN' && (
                     <input
                         type="tel"
                         placeholder="Numéro MTN Mobile Money"
@@ -109,7 +115,7 @@ const IsOpenGift = () => {
                     />
                 )}
 
-                {selectedPaymentMethod === 'creditCard' && (
+                {selectedPaymentMethod === 'Carte' && (
                     <>
                         <input
                             type="text"
@@ -126,7 +132,7 @@ const IsOpenGift = () => {
                     </>
                 )}
 
-                {selectedPaymentMethod === 'paypal' && (
+                {selectedPaymentMethod === 'PayPal' && (
                     <input
                         type="email"
                         placeholder="Email PayPal"
@@ -140,16 +146,22 @@ const IsOpenGift = () => {
 
     return (
         <div className="min-h-screen bg-white flex items-center justify-center p-4">
-            <div className="w-full max-w-md text-center space-y-6">
+            <div className="w-full max-w-md text-center space-y-6 container">
                 {/* Vidéo ou Image */}
-                <video
+                {/* <video
                     autoPlay
                     muted
                     loop
                     className="mx-auto mb-4 w-40 h-40 object-cover rounded-xl"
                 >
                     <source src="votre-lien-video.mp4" type="video/mp4" />
-                </video>
+                </video> */}
+
+                <img
+                    src={testimg}
+                    alt="Gift Animation"
+                    className="mx-auto mb-4 h-30 w-40 object-contain rounded-xl"
+                />
 
                 {/* Texte du proverbe */}
                 <p
@@ -187,17 +199,19 @@ const IsOpenGift = () => {
                 {/* Bouton d'ouverture des options de paiement */}
                 <Drawer.Root>
                     <Drawer.Trigger
-                        className="w-full p-3 rounded-xl bg-red-500 text-white"
+                        className="w-full p-3 rounded-xl bg-red-500 text-white flex items-center justify-center text-center"
                     >
-                        Choisir un mode de paiement
+                        Comment voulez-vous le recevoir ? <Gift className="w-5 h-5 ml-2" />
                     </Drawer.Trigger>
+
+
                     <Drawer.Portal>
                         <Drawer.Overlay className="fixed inset-0 bg-black/40" />
                         <Drawer.Content className="bg-white/90 flex flex-col rounded-t-[10px] h-[96%] mt-24 fixed bottom-0 left-0 right-0">
                             <div className="p-4 bg-white/90 rounded-t-[10px]">
                                 <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-gray-300 mb-4" />
                                 <div className="max-w-md mx-auto">
-                                    <h2 className="text-xl font-bold mb-4">Choisissez votre mode de paiement</h2>
+                                    <h2 className="text-xl font-bold mb-4">Comment voulez vous le recevoir ?</h2>
 
                                     {/* Boutons de méthodes de paiement */}
                                     <div className="flex justify-between space-x-2 mb-4">

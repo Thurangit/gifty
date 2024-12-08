@@ -1,0 +1,1 @@
+export const urlApp = "192.168.227.237:3000";

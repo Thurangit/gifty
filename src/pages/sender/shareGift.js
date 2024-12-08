@@ -14,16 +14,17 @@ import {
 import { Check, Copy } from 'lucide-react';
 import Snowfall from '../../modules/snowFall';
 import { motion, AnimatePresence } from 'framer-motion';
+import { urlApp } from '../../modules/urlApp';
 const ShareGift = () => {// URL à partager
     const [animationComplete, setAnimationComplete] = useState(false);
     const [copied, setCopied] = useState(false);
     // Configuration de l'application
-    const url = "BlissMomney.com";
+    const url = `${urlApp}/Open/The/Gift`;
     const appConfig = {
         logo: gift, // Remplacez par votre logo
         logoSize: 50, // Taille du logo configurable
         slogan: 'Scannez pour recevoir le cadeau !',
-        shareUrl: 'https://exemple.com' // URL par défaut à partager
+        shareUrl: `${urlApp}/Open/The/Gift` // URL par défaut à partager
     };
 
     useEffect(() => {

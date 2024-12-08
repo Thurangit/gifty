@@ -29,9 +29,9 @@ const ClosingGift = ({
         <div className="min-h-screen flex items-center justify-center bg-white p-4" onClick={() => page("/The/Gift")}>
             <div className="w-full max-w-md text-center">
                 {isOpening ? (
-                    <div className="animate-pulse text-3xl font-['Dancing_Script'] text-gray-800 
+                    <div className="animate-pulse text-3xl font-['Dancing_Script'] text-grey-800 
             sm:text-4xl md:text-5xl transition-all duration-500">
-                        Un cadeau pour toi...
+                        Un cadeau pour vous...
                     </div>
                 ) : (
                     <div className={`
@@ -49,7 +49,11 @@ const ClosingGift = ({
 
                         <p className="text-lg sm:text-xl md:text-2xl font-['Dancing_Script'] text-gray-600 
               max-w-full px-4 leading-relaxed">
-                            Vous avez reçu un cadeau de Junior Thuran ! Quelque chose de spécial t'attend. Clic pour l'ouvrir...!
+
+
+                            Vous avez reçu un cadeau de Junior Thuran. Une surprise spéciale vous attend. Cliquez pour l'ouvrir !
+
+
                         </p>
                     </div>
                 )}
