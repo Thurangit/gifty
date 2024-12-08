@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Snowfall from '../../modules/snowFall';
 import gift from '../../composants/images/one_gift.png';
+import { useNavigate } from 'react-router';
 const ClosingGift = ({
     imageUrl = gift,
     imageSize = "w-20 h-20"
 }) => {
     const [isOpening, setIsOpening] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const openingTimer = setTimeout(() => {
@@ -20,8 +22,11 @@ const ClosingGift = ({
         return () => clearTimeout(openingTimer);
     }, []);
 
+    const page = (page) => {
+        navigate(page)
+    }
     return (
-        <div className="min-h-screen flex items-center justify-center bg-white p-4">
+        <div className="min-h-screen flex items-center justify-center bg-white p-4" onClick={() => page("/The/Gift")}>
             <div className="w-full max-w-md text-center">
                 {isOpening ? (
                     <div className="animate-pulse text-3xl font-['Dancing_Script'] text-gray-800 
